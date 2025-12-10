@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amau Interactive – Services</title>
+
+        <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!--Custom CSS-->
+    <link rel="stylesheet" href="/CSS/style-service.css">
+</head>
+<body>
+
+    <!--NAVBAR-->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">AMAU INTERACTIVE</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="service.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                    <!--MODE TOGGLE-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="modeToggle">
+                        <i id="modeIcon" class="bi bi-sun"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!--TITLE-->
+<section class="service-header text-center py-5 fade-item">
+    <div class="container">
+        <h2 class="fw-bold">Our Services & Products</h2>
+        <p class="subtext">Kumpulan proyek, game, dan karya yang telah dikembangkan Amau Interactive.</p>
+    </div>
+</section>
+
+    <!--PRODUCT GRID-->
+<section class="product-grid py-4">
+    <div class="container">
+        <div class="row g-4">
+
+                <!--Product Item 1-->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="/assets/img/landoftears.png" class="product-img" alt="">
+                    <div class="product-overlay">
+                        <button class="btn btn-detail"
+                            data-title="Land of Tears"
+                            data-description="Bullet hell dark fantasy dengan fokus pada desain pola tembakan."
+                            data-img="/assets/img/landoftears.png"
+                            data-type="Bullet Hell"
+                            data-release="2022"
+                            data-platform="PC / Mobile / WebGL"
+                            data-url="#">
+                            View Detail
+                        </button>
+                    </div>
+                </div>
+                <h5 class="mt-2 text-center">Land of Tears</h5>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="/assets/img/crimsonbar.jpg" class="product-img" alt="">
+                    <div class="product-overlay">
+                       <button class="btn btn-detail"
+                            data-title="Crimson Barrage"
+                            data-description="Petualangan magis dengan puzzle interaktif."
+                            data-img="/assets/img/crimsonbar.jpg"
+                            data-type="Puzzle Adventure"
+                            data-release="2023"
+                            data-platform="PC / Mobile / WebGL"
+                            data-url="#">
+                            View Detail
+                        </button>
+                    </div>
+                </div>
+                <h5 class="mt-2 text-center">Crimson Barrage</h5>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="/assets/img/Amour (1).jpg" class="product-img" alt="">
+                    <div class="product-overlay">
+                        <button class="btn btn-detail"
+                            data-title="Ashfall Mirage"
+                            data-description="Visual novel experimental dengan sistem shader kustom dan engine unik."
+                            data-img="/assets/img/Amour (1).jpg"
+                            data-type="Visual Novel"
+                            data-release="2025"
+                            data-platform="PC / Mobile / WebGL"
+                            data-url="#">
+                            View Detail
+                        </button>
+                    </div>
+                </div>
+                <h5 class="mt-2 text-center">Ashfall Mirage</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--MODAL-->
+<div class="modal fade" id="detailModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content modal-custom">
+          
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+            <div class="modal-body text-center">
+                    <!--gambar kecil & rounded-->
+                <img id="modalImg" class="img-modal-custom mb-3" alt="">
+
+                <p id="modalDesc" class="mb-3"></p>
+                <div id="modalInfo" class="modal-info">
+                    <!--auto-filled by JS-->
+                </div>
+
+                    <!--tombol preview-->
+                <a id="modalPreviewBtn" href="#" target="_blank" class="btn btn-preview mt-3 d-none">
+                    <i class="bi bi-box-arrow-up-right"></i> Preview / Demo
+                </a>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+    <!--SCROLL TO TOP BUTTON-->
+<button id="scrollTopBtn" class="scroll-top-btn">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+    <!--FOOTER-->
+<footer class="mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Amau Interactive. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!--Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Custom JS-->
+<script src="/JS/service.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+/* ------------------------------
+   AMAU INTERACTIVE — ABOUT PAGE
+-------------------------------*/
+
+/*Default (Dark Mode)*/
+:root {
+  --bg: #000;
+  --text: #fff;
+  --subtext: #c9c9c9;
+
+  --accent: #820000;
+  --accent-dark: #540000;
+
+  --nav-bg: rgba(10,10,10,0.85);
+}
+
+  /*Light Mode*/
+body.light-mode {
+  --bg: #F4F6FA;
+  --text: #1a1a1a;
+  --subtext: #444;
+
+  --accent: #0A0F2A;
+  --accent-dark: #071C1F;
+
+  --nav-bg: rgba(255,255,255,0.85);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+  /*NAVBAR*/
+
+.navbar-custom .navbar-brand {
+  color: var(--text) !important;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: var(--accent) !important;
+}
+
+.navbar-custom {
+  background: var(--nav-bg);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.navbar-custom .nav-link {
+  color: var(--text) !important;
+}
+.navbar-custom .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* light mode hover */
+body.light-mode .navbar-custom .nav-link:hover {
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+/* ----------------------------------------
+   BASE STYLES
+---------------------------------------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+/* ----------------------------------------
+   PAGE HEADER
+---------------------------------------- */
+.about-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.subtext {
+  color: var(--subtext);
+}
+
+/* ----------------------------------------
+   MAGAZINE LAYOUT
+---------------------------------------- */
+.magazine-layout {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 40px;
+}
+
+body.light-mode .magazine-layout {
+  border-color: rgba(0,0,0,0.15);
+}
+
+  /*ARTICLE BLOCK (kiri)*/
+.article-block {
+  line-height: 1.8;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+}
+
+  /*SIDEBAR FACT BLOCK*/
+.sidebar-block {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+
+}
+
+body.light-mode .sidebar-block {
+  background: rgba(0,0,0,0.05);
+}
+
+.sidebar-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+  /*Facts layout*/
+.fact-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+body.light-mode .fact-item {
+  border-color: rgba(0,0,0,0.12);
+}
+
+.fact-label {
+  font-weight: 600;
+  color: var(--subtext);
+}
+.fact-value {
+  font-weight: 500;
+}
+
+/* ----------------------------------------
+   FADE ANIMATION
+---------------------------------------- */
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------------------------------
+   TEAM SECTION
+--------------------------------------- */
+.team-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: var(--accent);
+}
+
+.team-card {
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  background: rgba(var(--accent-rgb), 0.15);
+  padding: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+body.light-mode .team-card {
+  background: rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.team-photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.team-name {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.team-role {
+  font-size: 0.95rem;
+  color: var(--subtext);
+}
+
+/* ---------------------------------------
+   MODAL TEAM
+--------------------------------------- */
+.member-modal {
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 25px;
+}
+
+body.light-mode .member-modal {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+.modal-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.modal-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  margin-top: 5px;
+}
+
+.modal-role {
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.modal-info {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.info-label {
+  font-weight: 700;
+  width: 95px;
+  display: inline-block;
+}
+
+.modal-desc {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+  /*Scroll to Top Button*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+    z-index: 999;
+}
+
+  /*Saat tombol muncul*/
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+  /*Hover*/
+.scroll-top-btn:hover {
+    background: var(--accent-dark);
+}

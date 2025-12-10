@@ -1,0 +1,263 @@
+/* ------------------------------
+   AMAU INTERACTIVE — SERVICES PAGE
+-------------------------------*/
+
+  /*Default (Dark Mode)*/
+:root {
+  --bg: #000;
+  --text: #fff;
+  --subtext: #c9c9c9;
+
+  --accent: #820000;
+  --accent-dark: #540000;
+
+  --nav-bg: rgba(10,10,10,0.85);
+}
+
+  /*Light Mode*/
+body.light-mode {
+  --bg: #F4F6FA;
+  --text: #1a1a1a;
+  --subtext: #444;
+
+  --accent: #0A0F2A;
+  --accent-dark: #071C1F;
+
+  --nav-bg: rgba(255,255,255,0.85);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+  /*NAVBAR | samain kek yang laen aja biar work*/
+
+.navbar-custom .navbar-brand {
+  color: var(--text) !important;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: var(--accent) !important;
+}
+
+.navbar-custom {
+  background: var(--nav-bg);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.navbar-custom .nav-link {
+  color: var(--text) !important;
+}
+.navbar-custom .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+  /*light mode hover*/
+body.light-mode .navbar-custom .nav-link:hover {
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+  /*HEADER*/
+.service-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.subtext {
+  color: var(--subtext);
+}
+
+  /*biar animasinya sinkron*/
+.service-header.fade-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.6s ease;
+}
+.service-header.fade-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*PRODUCT GRID*/
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.product-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  filter: brightness(70%);
+  transform: scale(1.05);
+}
+
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.btn-detail {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-detail:hover {
+  background: var(--accent-dark);
+}
+
+  /*MODAL PLS WORK*/
+.img-modal-custom {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.modal-desc {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 1.7rem;
+}
+
+.modal-info {
+    margin-top: 10px;
+}
+
+.modal-info-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.modal-info-label {
+    width: 120px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.modal-info-value {
+    flex: 1;
+    opacity: 0.9;
+}
+
+/* Modal | bissmillah aman*/
+.modal-custom {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff !important;   /*teks putih untuk dark mode*/
+}
+
+body.light-mode .modal-custom {
+    background: rgba(255,255,255,0.92);
+    color: #000 !important;   /*teks hitam untuk light mode*/
+}
+
+  /*Tombol Preview*/
+.btn-preview {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-preview:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+  /*Light mode modal*/
+body.light-mode .modal-custom {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+body.light-mode .modal-desc {
+  color: #000;
+}
+
+  /*Scroll to Top Button*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+    z-index: 999;
+}
+
+  /*Saat tombol muncul*/
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+  /*Hover*/
+.scroll-top-btn:hover {
+    background: var(--accent-dark);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.fade-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.6s ease;
+}
+
+.fade-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}

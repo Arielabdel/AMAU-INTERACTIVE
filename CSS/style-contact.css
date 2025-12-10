@@ -1,0 +1,247 @@
+/* ------------------------------
+   AMAU INTERACTIVE — CONTACT PAGE
+-------------------------------*/
+
+/*Default (Dark Mode)*/
+:root {
+    --bg: #000;
+    --text: #fff;
+    --subtext: #c9c9c9;
+
+    --accent: #820000;
+    --accent-dark: #540000;
+
+        /*Tambahan RGB (untuk efek translucent)*/
+    --accent-rgb: 130, 0, 0;       /*RGB dari #820000*/
+
+        /*NAVBAR BACKGROUND (hilang di versi sebelumnya)*/
+    --nav-bg: rgba(10,10,10,0.85);
+}
+
+    /*Light Mode*/
+body.light-mode {
+    --bg: #F4F6FA;
+    --text: #1a1a1a;
+    --subtext: #444;
+
+    --accent: #0A0F2A;
+    --accent-dark: #071C1F;
+
+    /*RGB biru aristokrat*/
+    --accent-rgb: 10, 15, 42;      /*RGB ver #0A0F2A*/
+
+    /*NAVBAR BACKGROUND light mode*/
+    --nav-bg: rgba(255,255,255,0.85);
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+}
+
+/* =========================================================
+   NAVBAR (FIXED + NO CHANGES AGAIN I SWEAR)
+========================================================= */
+
+.navbar-custom .navbar-brand {
+    color: var(--text) !important;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: var(--accent) !important;
+}
+
+.navbar-custom {
+    background: var(--nav-bg);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.navbar-custom .nav-link {
+    color: var(--text) !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--accent) !important;
+}
+
+    /*light mode hover*/
+body.light-mode .navbar-custom .nav-link:hover {
+    background: var(--accent);
+    color: #fff !important;
+    border-radius: 6px;
+}
+
+    /*biar animasinya sinkron*/
+.about-header.fade-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.6s ease;
+}
+.about-header.fade-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.header-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2.6rem;
+    color: var(--accent);
+}
+
+.header-sub {
+    color: var(--subtext);
+}
+
+/* =========================================================
+   CONTACT HEADER
+========================================================= */
+
+.contact-title {
+    font-size: 2.3rem;
+    color: var(--accent);
+}
+
+.contact-desc {
+    line-height: 1.7;
+    color: var(--subtext);
+}
+
+/* =========================================================
+   CONTACT FORM CARD
+========================================================= */
+
+.contact-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+}
+
+body.light-mode .contact-card {
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
+}
+
+/* =========================================================
+   INPUT FIELDS
+========================================================= */
+
+.contact-input {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
+    color: var(--text);
+}
+
+body.light-mode .contact-input {
+    background: rgba(255,255,255,0.6);
+    color: var(--text);
+}
+
+.contact-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 6px rgba(var(--accent-rgb), 0.45);
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.contact-btn {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.contact-btn:hover {
+    background: var(--accent-dark);
+}
+
+body.light-mode .contact-btn:hover {
+    color: #fff !important;
+}
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.social-link {
+    color: var(--accent);
+    font-size: 1.8rem;
+    transition: 0.25s;
+}
+
+.social-link:hover {
+    color: var(--accent-dark);
+    transform: translateY(-4px);
+}
+
+    /*Scroll to Top Button*/
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+    z-index: 999;
+}
+
+    /*Saat tombol muncul*/
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+    /*Hover*/
+.scroll-top-btn:hover {
+    background: var(--accent-dark);
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.fade-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.6s ease;
+}
+
+.fade-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}

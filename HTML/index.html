@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amau Interactive – Home</title>
+
+        <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!--Custom CSS-->
+    <link rel="stylesheet" href="/CSS/style-index.css">
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">AMAU INTERACTIVE</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="service.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                    <!--MODE TOGGLE-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="modeToggle">
+                        <i id="modeIcon" class="bi bi-sun"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!--HOME BRIDGE SECTION-->
+<section class="home-bridge text-center py-5 fade-item">
+    <div class="container">
+        <h2 class="fw-bold">Welcome to Amau Interactive</h2>
+        <p class="subtext mt-2">
+            -Where Idea Takes Shape in the Shadows-
+        </p>
+        <p class="subtext mt-2">
+            Studio independen yang berfokus pada crafting, storytelling, dan keindahan visual dalam setiap sentuhan
+        </p>
+    </div>
+</section>
+
+    <!--HERO/CAROUSEL-->
+<header class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+                <!--Slide 1-->
+            <div class="carousel-item active">
+                <img src="/assets/img/landoftears.png" class="d-block w-100 hero-img" alt="">
+                <div class="carousel-caption">
+                    <h1 class="display-5 fw-bold">Crafting Worlds, One Pixel at a Time</h1>
+                    <p class="tagline">Studio indie dengan spesialisasi programming, 2D/3D art, game designing, dan bullet hell prototyping.</p>
+                    <a href="service.html" class="btn btn-primary mt-3">Lihat Portofolio</a>
+                </div>
+            </div>
+
+                <!--Slide 2-->
+            <div class="carousel-item">
+                <img src="/assets/img/crimsonbar.jpg" class="d-block w-100 hero-img" alt="">
+                <div class="carousel-caption">
+                    <h1 class="display-5 fw-bold">Precision. Aesthetics. Impact.</h1>
+                    <p class="tagline">Menghasilkan efek visual dan prototipe game dengan detail tinggi.</p>
+                    <a href="service.html" class="btn btn-primary mt-3">Lihat Produk</a>
+                </div>
+            </div>
+
+                <!--Slide 3-->
+            <div class="carousel-item">
+                <img src="/assets/img/Amour (1).jpg" class="d-block w-100 hero-img" alt="">
+                <div class="carousel-caption">
+                    <h1 class="display-5 fw-bold">A Studio Built on Passion</h1>
+                    <p class="tagline">Tim kecil dengan kemampuan besar, siap bekerja sama dengan studio besar dan dalam kesempatan besar.</p>
+                    <a href="about.html" class="btn btn-primary mt-3">Kenali Kami</a>
+                </div>
+            </div>
+        </div>
+
+            <!--Controls-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</header>
+
+    <!--SCROLL TO TOP BUTTON-->
+<button id="scrollTopBtn" class="scroll-top-btn">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+    <!--FOOTER-->
+<footer class="mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; 2025 Amau Interactive. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <!--Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Custom JS-->
+<script src="/JS/script.js"></script>
+
+</body>
+</html>
