@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // -----------------------------
-// SCROLL TOP BUTTON
+    //SCROLL TOP BUTTON
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
     //Munculkan tombol ketika user scroll > 200px

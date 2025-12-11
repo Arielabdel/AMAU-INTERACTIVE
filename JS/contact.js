@@ -35,7 +35,7 @@ modeToggle.addEventListener("click", (e) => {
 });
 
 // ======================================
-// FADE-IN ON SCROLL
+    //FADE-IN ON SCROLL
 // ======================================
 const fadeItems = document.querySelectorAll(".fade-item");
 
@@ -53,7 +53,7 @@ window.addEventListener("scroll", handleFade);
 window.addEventListener("load", handleFade);
 
 // -----------------------------
-// SCROLL TOP BUTTON
+    //SCROLL TOP BUTTON
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
     //Munculkan tombol ketika user scroll > 200px | fixed distance

@@ -4,7 +4,7 @@
 const modeToggle = document.getElementById("modeToggle");
 const modeIcon = document.getElementById("modeIcon");
 
-// Restore saved mode
+    //Restore saved mode
 let savedMode = localStorage.getItem("theme");
 
 if (savedMode === "light") {
@@ -12,7 +12,7 @@ if (savedMode === "light") {
     modeIcon.classList.replace("bi-sun", "bi-moon");
 }
 
-// Toggle mode without jumping to top
+    //Toggle mode without jumping to top
 modeToggle.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -56,14 +56,14 @@ const modalInfo = document.getElementById("modalInfo"); // NEW
 document.querySelectorAll(".btn-detail").forEach(btn => {
     btn.addEventListener("click", () => {
 
-        // Basic data
+            //Basic data
         modalTitle.textContent = btn.getAttribute("data-title");
         modalDesc.textContent = btn.getAttribute("data-description");
         modalImg.src = btn.getAttribute("data-img");
 
-        // ======================
-        // NEW – Additional info
-        // ======================
+            // ======================
+            // NEW – Additional info
+            // ======================
         const type     = btn.getAttribute("data-type")     || "-";
         const release  = btn.getAttribute("data-release")  || "-";
         const platform = btn.getAttribute("data-platform") || "-";
@@ -83,9 +83,9 @@ document.querySelectorAll(".btn-detail").forEach(btn => {
             </div>
         `;
 
-        // ======================
-        // Preview Link
-        // ======================
+            // ======================
+            // Preview Link
+            // ======================
         const previewBtn = document.getElementById("modalPreviewBtn");
         const previewURL = btn.getAttribute("data-url");
 
@@ -101,10 +101,10 @@ document.querySelectorAll(".btn-detail").forEach(btn => {
 });
 
 // -----------------------------
-// SCROLL TOP BUTTON
+    //SCROLL TOP BUTTON
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-// Munculkan tombol ketika user scroll > 200px
+    //Munculkan tombol ketika user scroll > 200px
 window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         scrollTopBtn.classList.add("show");
@@ -113,7 +113,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Ketika tombol diklik → smooth scroll ke atas
+    //Ketika tombol diklik > smooth scroll ke atas
 scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({
         top: 0,

@@ -1,5 +1,5 @@
 // -----------------------------
-// MODE TOGGLE OMG PLS WORK
+    //MODE TOGGLE OMG PLS WORK
 // -----------------------------
 const modeToggle = document.getElementById("modeToggle");
 const modeIcon = document.getElementById("modeIcon");
@@ -64,7 +64,7 @@ document.querySelectorAll(".team-card").forEach(card => {
 });
 
 // -----------------------------
-// SCROLL TOP BUTTON
+    //SCROLL TOP BUTTON
 // -----------------------------
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
